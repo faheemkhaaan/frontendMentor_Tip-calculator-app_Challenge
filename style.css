@@ -1,0 +1,257 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(185, 41%, 84%);
+    width: 100vw;
+    height: 100vh;
+
+}
+.container {
+    width: 68vw;
+    /* height: 38vh; */
+    background-color: white;
+    border-radius: 28px;
+    display: flex;
+    padding: 38px 42px;
+    gap: 48px;
+}
+.left{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.bill{
+    flex-basis: 33%;
+    /* width: 100%; */
+}
+.btn{
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,65px);
+}
+.buttons{
+    background-color: hsl(183, 100%, 15%);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: .3s linear;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* grid-template-rows: repeat(2,70px); */
+}
+.active-btn{
+
+    background-color: hsl(172, 67%, 45%);
+}
+.buttons:hover{
+    background-color: hsl(172, 67%, 45%);
+}
+#custom{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 1.5rem;
+}
+.selectTip{
+    flex-basis: 34%;
+}
+.numberOfPeople{
+    flex-basis: 33%;
+}
+.input-field{
+    position: relative;
+    /* margin-top: 10px; */
+    width: 100%;
+}
+.input-field input {
+    color: hsl(183, 100%, 15%);
+    text-align: right;
+    padding: 10px 12px;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: .1s linear;
+    font-weight: 600;
+    width: 100%;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+
+}
+.input-field input:focus, .input-field input:hover{
+    outline: 2px solid hsl(172, 67%, 45%);
+
+}
+.input-field img{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.right {
+    border-radius: 20px;
+    background-color: hsl(183, 100%, 15%);
+    padding: 35px;
+    width: 50%;
+}
+.output{
+    height: 80%;
+}
+.reset {
+    padding: 14px 10px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 1.4rem;
+}
+.reset:hover{
+    background-color: hsl(189, 41%, 97%);
+}
+
+.center{
+    display: flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction: column;
+    margin: 1rem 0
+}
+
+.input-error{
+    /* display: none; */
+    color: red;
+    text-align: right;
+    margin-left: 25px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.small-text {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 12px 0px;
+}
+.perPerson{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+    margin-bottom: 30px;
+    color: white;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+    color: white;
+}
+.amount {
+    color: hsl(172, 67%, 45%);
+    font-size: 3.8em;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+@media (max-width: 950px){
+    .container{
+        width: 90vw;
+        /* height: vh; */
+    }
+}
+
+@media (max-width: 450px){
+    .container {
+        width: 100%;
+        /* height: 700px; */
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        font-size: 1.3em;
+    }
+    .btn{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .buttons{
+        padding: 10px;
+        flex-basis: 25%;
+        flex-grow: 1;
+        height: 40px;
+        font-size: 1.2em;
+    }
+    #custom{
+        flex-grow: 1;
+        flex-basis: 27%;
+    }
+    .selectTip {
+        flex-basis: 34%;
+    }
+    .input-field {
+        position: relative;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .input-field input {
+        width: 100%;
+        outline: none;
+        cursor: pointer;
+        transition: .1s linear;
+        font-size: 1.7em;
+        padding: 10px;
+    }
+    .bill{
+        width: 100%;
+    }
+   .num{
+    width: 100% !important;
+   }
+    .output {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 1.3em;
+    }
+    .amount{
+        font-size: 2.5rem;
+    }
+    .reset {
+        padding: 14px;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        background-color: hsl(172, 67%, 45%);
+        color: hsl(183, 100%, 15%);
+        font-weight: bold;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+}
